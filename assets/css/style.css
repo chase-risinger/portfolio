@@ -1,13 +1,15 @@
   :root {
-  --primary-color: #070042;
+  --primary-color: #ffffff;
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
 }
 
-  .flex-row{
-    display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -37,9 +39,48 @@
     color: var(--primary-color);
   }
 
-  header nav {
+  .hero img{
+      width: 20%;
+      position: relative;
+      left: 30px;
+      border-radius: 100%;
+
+  }
+
+  .hero h2{
+      color: var(--primary-color);
+      font-size: 48px;
+      text-align: right;
+  }
+
+ header nav {
     margin: 7px 0;
   }
+
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--primary-color);
+    border-radius: 15px;
+  }
+ 
+  header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 15px;
+    text-shadow: none;
+  }
+
   body {
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
@@ -49,66 +90,183 @@
     background-image: url("../images/bricks.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
   }
+
+
 
   .intro p {
     line-height: 1.7;
-    color: var(--tertiary-color);
+    color: black;
     width: 80%;
-    font-size: 20px;
+    font-size: 24px;
     margin: 0 auto;
     text-align: center;
   }
 
+
+
     .work {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    margin: 10px auto;
+    padding-bottom: 10px;   
+    width: 40%;
+
+
   }
-
-    .work:not(:last-child) {
-    border-bottom: 1px solid var(--tertiary-color);
-   } 
-
 
   .works {
-    background: var(--primary-color);
-  }
-
-  .work-img{
-    flex: 1 12%;
-    margin-right: 20px;
-  }
-
-  .work-img img{
-    max-width: 100%;
-  }
-  .work-info{
     display: flex;
     flex-wrap: wrap;
+    background: var(--primary-color);
     align-items: center;
+    justify-content: space-around;
   }
 
+ .work-img {
+     align-items: center;
+     margin: 10px auto;
+ }
+
+  .work-img img{
+    max-width: 80%;
+  }
+
+ 
   
   .work h3 {
     color: var(--secondary-color);
-    font-size: 46px;
-    flex: 1 30%;
+    font-size: 30px;
+    text-align: center;
   }
 
-  .work-text {
-    flex: 12;
+
+  .section-title {
+    text-align: center;
+      font-size: 48px;
+      color: var(--secondary-color);
+      border-bottom: 3px dashed;
+      padding-bottom: 10px;
+
+  }
+
+    .secondary-border {
+    border-color: var(--tertiary-color);
+  }
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2, footer div {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-cta, .hero-form {
+    width: 100%;
   }
   
-  .work-text p {
-    color: var(--tertiary-color);
-    font-size: 18px;
+  .hero-cta {
+    text-align: center;
   }
+  
+  .section-title {
+    width: 80%;
+  }
+
+  .work h3{
+    width: 70%;
+    font-size: 20px;
+  }
+
+  
+  .trainer {
+    flex: 0 70%;
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  
+  section {
+    padding: 30px 15px;
+  }
+
+  .work h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+
+
+  .work-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;  
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .hero-form button {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .trainer {
+    flex: 0 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+
+  .contact-form {
+    order: 3;
+  }
+  
+}
