@@ -236,14 +236,14 @@ footer h2{
     font-size: 30px;
     text-align: center;
   }
-   #jo2{
+   #git-stuff{
     flex: 1 55%;
     align-items: center;
     justify-content: center;
     margin: 10px auto;
  }
 
- #jo2 img{
+ #git-stuff img{
    margin: 10px auto;
    display: block;
  }
